@@ -24,3 +24,11 @@ No se tomaron en cuenta los datos obtenidos del año 2020, debido a la irregular
 
 ### El dato de salida
 - 'Abandono', tipo: int; Es la salida del modelo, que indica si el alumno abandonó la materia o no (1=si, 0=no).
+
+## Modelo utilizado
+Como tenemos un problema de clasificacion, decidimos utilizar el modelo de regresion lineal.
+
+## Analisis de los resultados
+Para analizar los resultados, ademas de mirar su precision tambien revisamos los graficos de 'loss' y 'val_loss' a lo largo de las epochs.
+Si en el grafico las dos curvas se separan, y 'val_loss' aumenta mas que 'loss', esto significa que hubo overfitting y que debemos de utilizar menos iteraciones.
+Con este analisis decidimos dejar las epochs=35 y tuvimos mejores resultados.
